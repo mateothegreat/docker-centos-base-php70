@@ -16,7 +16,7 @@ RUN rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
                     php70-php-cli \
                     php70-php-common \
                     php70-php-devel \
-                    php70-php-fpm 
+                    php70-php-fpm \
                     php70-php-gd \
                     php70-php-gmp \
                     php70-php-intl \
