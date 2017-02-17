@@ -1,7 +1,7 @@
 # docker-centos-base-php70
 
-<img style="float: right;  padding-right: 20px; width: 200px; text-align: right; display: block;" src="http://i.imgur.com/rAuZnDH.png">
-<img style="height: 120px; float: right;" src="http://www.xtremeinfinity.com/wp-content/uploads/2015/12/PHP-7.png">
+<img style="height: 120px;" src="http://www.xtremeinfinity.com/wp-content/uploads/2015/12/PHP-7.png">
+<img style="float: right;  padding-right: 20px; width: 200px;" src="http://i.imgur.com/rAuZnDH.png">
 
 <span style="width: 300px; float: left">
 Centos 7 & PHP7.0 (from remi). Ready for nginx container [mateothegreat/docker-centos-base-nginx](https://github.com/mateothegreat/docker-centos-base-nginx) using fastcgi (php-fpm).
