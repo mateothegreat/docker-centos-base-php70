@@ -4,6 +4,9 @@
 #
 # Borrowed & pruned from https://github.com/million12/docker-nginx-php.
 #
+ 
+
+
 FROM appsoa/docker-centos-base-nginx
 LABEL maintainer    = "Matthew Davis <matthew@appsoa.io>"
 LABEL repository    = appsoa
