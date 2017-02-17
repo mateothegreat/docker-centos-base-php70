@@ -7,7 +7,7 @@
 FROM appsoa/docker-centos-base-nginx
 LABEL maintainer    = "Matthew Davis <matthew@appsoa.io>"
 LABEL repository    = appsoa
-LABEL image         = docker-centos-php70
+LABEL image         = docker-centos-base-php70
 LABEL built_at      = 0000-00-00 00:00:00
 
 RUN rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
