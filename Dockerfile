@@ -4,10 +4,8 @@
 #
 # Borrowed & pruned from https://github.com/million12/docker-nginx-php.
 #
- 
-
-
 FROM appsoa/docker-centos-base-nginx
+
 LABEL maintainer    = "Matthew Davis <matthew@appsoa.io>"
 LABEL repository    = appsoa
 LABEL image         = docker-centos-base-php70
@@ -43,7 +41,3 @@ RUN ln -sfF /opt/remi/php70/enable /etc/profile.d/php70-paths.sh && \
     ln -sfF /opt/remi/php70/root/usr/bin/{pear,pecl,phar,php,php-cgi,php-config,phpize} /usr/local/bin/. && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \  
     chown user:wheel /usr/local/bin/composer && composer --version 
-    
-COPY /entrypoint.sh /
-COPY /entrypoint.d/* /entrypoint.d/
-ONBUILD COPY /entrypoint.d/* /entrypoint.d/
