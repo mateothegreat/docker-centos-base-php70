@@ -1,6 +1,9 @@
 NAME	        = appsoa/docker-centos-base-php70
 ALIAS	        = nginx-php7
-VERSION	      = 1.0
+VERSION 	= 1.0
+
+GIT_COMMIT 	= $(strip $(shell git rev-parse --short HEAD))
+CODE_VERSION 	= $(strip $(shell cat VERSION))
 
 .PHONY:	all build test tag_latest release
 
@@ -9,7 +12,13 @@ clean:	docker-current-clean-images docker-current-clean-volumes docker-global-cl
 build:
 
 	@echo "Building an image with the current tag $(NAME):$(VERSION).."
-	@docker build -t $(NAME):$(VERSION) --rm .
+	@docker build 	--rm \
+			--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` 		\
+			--build-arg VERSION=$(VERSION) 					\
+			--build-arg VCS_URL=`git config --get remote.origin.url` 	\
+			--build-arg VCS_REF=$(GIT_COMMIT) 				\
+			--tag $(NAME):$(VERSION)					\
+			.
 
 run:
 
