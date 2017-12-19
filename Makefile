@@ -12,7 +12,7 @@ clean:	docker-current-clean-images docker-current-clean-volumes docker-global-cl
 build:
 
 	@echo "Building an image with the current tag $(NAME):$(VERSION).."
-	@docker build 	--rm \
+	@docker build 	--rm  								\
 			--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` 		\
 			--build-arg VERSION=$(VERSION) 					\
 			--build-arg VCS_URL=`git config --get remote.origin.url` 	\
