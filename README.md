@@ -1,17 +1,39 @@
 # docker-centos-base-php70
 
-<img style="height: 120px;" src="http://www.xtremeinfinity.com/wp-content/uploads/2015/12/PHP-7.png">
-<img style="float: right;  padding-right: 20px; width: 200px;" src="http://i.imgur.com/rAuZnDH.png">
-
-<span style="width: 300px; float: left">
 Centos 7 & PHP7.0 (from remi). Ready for nginx container [mateothegreat/docker-centos-base-nginx](https://github.com/mateothegreat/docker-centos-base-nginx) using fastcgi (php-fpm).
-</span>
 
+To begin, clone this repo:
+```
+git clone https://github.com/mateothegreat/docker-centos-base-php70
+```
 
-<br style="clear: both">
-#### PHP Modules
+# Running
+Replace '.' for the --volume switch if you do not want to mount in-place the current working directory.
+To start a container instance:
+```
+make run
+```
+which is the same as:
+```
+docker run  -d                      \
+            --rm                    \
+            --volume .:/www         \
+            --name nginx-php70      \
+            appsoa/docker-centos-base-php70:latest
+```
+
+# Building
+
+Update Dockerfile to your liking and run:
+
+```
+make build
+```
+
+## PHP Modules
 
 ```bash
+
 RUN rpm -Uvh http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
     yum install -y  php70-php \
                     php70-php-bcmath \
