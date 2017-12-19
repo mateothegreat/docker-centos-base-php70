@@ -2,6 +2,8 @@
 
 Centos 7 & PHP7.0 (from remi). Ready for nginx container [mateothegreat/docker-centos-base-nginx](https://github.com/mateothegreat/docker-centos-base-nginx) using fastcgi (php-fpm).
 
+[![Docker Build Status](https://img.shields.io/docker/build/appsoa/docker-centos-base-php70.svg?style=flat-square)](https://hub.docker.com/r/appsoa/docker-centos-base-php70/) [![Twitter Follow](https://img.shields.io/twitter/follow/yomateod.svg?label=Follow&style=flat-square)](https://twitter.com/yomateod) [![Skype Contact](https://img.shields.io/badge/skype%20id-appsoa-ff69b4.svg?style=flat-square)](skype:appsoa?chat)
+
 To begin, clone this repo:
 ```
 git clone https://github.com/mateothegreat/docker-centos-base-php70
